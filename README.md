@@ -8,7 +8,7 @@ This project explores how variants of **Kolmogorov-Arnold Networks (KAN)** perfo
 
 KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representation theorem**, which suggests that any multivariate continuous function can be represented using a finite sum of univariate functions. This theoretical framework allows KANs to learn expressive, adaptive transformations that may outperform standard MLPs, especially on high-dimensional structured data like images.
 <p align="center">
-  <img src="pictures/KAN_1.png" alt="KAN Network" width="500" height="300">
+  <img src="pictures/KAN_1.png" alt="KAN Network" width="700" height="500">
 </p>
 
 ---
