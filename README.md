@@ -10,6 +10,27 @@ KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representa
 
 ---
 
+## 🚀 Features
+
+- 🔍 Uses **ViT-DINOv2** extracted features
+- 🔧 Evaluates **6 KAN variants** + MLP baseline:
+  - EfficientKAN
+  - FastKAN
+  - ChebyKAN
+  - JacobiKAN
+  - RBFKAN
+  - MLP
+- 🔢 Compares with **Traditional ML models**:
+  - Logistic Regression, Random Forest, SVM, XGBoost, etc.
+- 📊 Evaluation Metrics:
+  - Accuracy, Precision, Recall, F1 Score
+  - AUC, Balanced Accuracy, Average Precision
+  - Confusion Matrix
+- ⚙️ Hyperparameter tuning with `Optuna` and PyTorch Lightning
+
+---
+
+
 ## 🗂️ Project Structure
 
 
