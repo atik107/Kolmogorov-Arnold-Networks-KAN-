@@ -1,1 +1,11 @@
-
+pytorch-lightning
+lovely-tensors
+lpips
+optuna
+git+https://github.com/ZiyaoLi/fast-kan.git
+git+https://github.com/SynodicMonth/ChebyKAN.git
+git+https://github.com/SpaceLearner/JacobiKAN.git
+git+https://github.com/sidhu2690/RBF-KAN.git
+git+https://github.com/Zhangyanbo/FCN-KAN.git
+git+https://github.com/GistNoesis/FourierKAN.git
+git+https://github.com/Blealtan/efficient-kan.git
