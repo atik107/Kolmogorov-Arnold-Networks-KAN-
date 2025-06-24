@@ -1,4 +1,4 @@
-# Kolmogorov-Arnold Networks (KAN) for Image Classification
+# Improving Computational Efficiency in Neural Network using Kolmogorov-Arnold Network(KAN)
 
 This project explores how variants of **Kolmogorov-Arnold Networks (KAN)** perform on image classification tasks compared to traditional **Multi-Layer Perceptrons (MLP)**. We evaluate both models on benchmark image datasets and analyze their effectiveness in feature learning and classification accuracy.
 
