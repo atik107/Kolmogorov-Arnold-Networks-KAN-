@@ -29,7 +29,7 @@ KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representa
 
 
 ---
-
+## 🗂️ My Project Structure
 ## 🚀 Features
 
 - 🔍 Uses **ViT-DINOv2** extracted features
@@ -51,7 +51,7 @@ KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representa
 ---
 
 
-## 🗂️ Project Structure
+
 
 
 ## 🧠 Model Comparison: KAN Variants vs MLP
