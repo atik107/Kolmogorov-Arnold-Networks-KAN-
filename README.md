@@ -16,6 +16,13 @@ KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representa
 <p align="center">
   <img src="pictures/ss3.png" alt="KAN Network" width="1000" height="700">
 </p>
+
+## Why B-Spline over Traditional Activation?
+
+1. Smooth and differentiable, leading to stable training.  
+2. Local control allows fine-grained, flexible function shaping.  
+3. Efficiently approximates complex functions with fewer parameters.  
+4. Better suited for tasks requiring smooth and precise approximations.
 <p align="center">
   <img src="pictures/ss2.png" alt="KAN Network" width="800" height="400">
 </p>
