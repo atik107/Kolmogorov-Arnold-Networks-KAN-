@@ -1,0 +1,70 @@
+import torch
+import lovely_tensors as lt
+lt.monkey_patch()
+from tqdm import tqdm
+import os
+import timm
+from torchvision import datasets, transforms
+from torch.utils.data import DataLoader
+
+# Settings
+class Settings:
+    data_folder = r"D:\Atik\KAN Thesis\kan_classification\Fire_detection_split"
+    features_folder = r"D:\Atik\KAN Thesis\features"
+    model_name = "vit_large_patch14_dinov2.lvd142m"
+
+settings = Settings()
+
+# Choose device (GPU if available, else CPU)
+def choose_device():
+    if torch.cuda.is_available():
+        return torch.device("cuda")
+    elif torch.backends.mps.is_built():
+        return torch.device("mps")
+    else:
+        return torch.device("cpu")
+
+device = choose_device()
+print("Using device:", device)
+
+# Load pretrained model without classification layer
+model = timm.create_model(settings.model_name, pretrained=True, num_classes=0)
+model.eval()
+model.to(device)
+
+# Image preprocessing
+transform = transforms.Compose([
+    transforms.Resize(518),
+    transforms.CenterCrop(518),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=(0.485, 0.456, 0.406),
+                         std=(0.229, 0.224, 0.225))
+])
+
+# Extract features function
+def get_features(data_loader):
+    feature_list = []
+    label_list = []
+    with torch.no_grad():
+        for images, labels in tqdm(data_loader):
+            images = images.to(device)
+            outputs = model(images)
+            feature_list.append(outputs.cpu())
+            label_list.append(labels)
+    return torch.cat(feature_list), torch.cat(label_list)
+
+# Extract features for train, val, and test sets
+splits = ['train', 'val', 'test']
+for split in splits:
+    print(f"\nExtracting features for {split} set")
+    folder = os.path.join(settings.data_folder, split)
+    dataset = datasets.ImageFolder(folder, transform=transform)
+    loader = DataLoader(dataset, batch_size=32, shuffle=False)
+
+    features, labels = get_features(loader)
+
+    save_path = os.path.join(settings.features_folder, settings.model_name)
+    os.makedirs(save_path, exist_ok=True)
+    file_path = os.path.join(save_path, f"{split}_features.pt")
+    torch.save((features, labels), file_path)
+    print(f"Saved {split} features to {file_path}")
