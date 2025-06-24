@@ -14,7 +14,7 @@ KANs offer a novel architecture inspired by the **Kolmogorov–Arnold representa
 ---
 ## 🧠 KAN Architecture over MLP
 <p align="center">
-  <img src="pictures/ss3.png" alt="KAN Network" width="900" height="500">
+  <img src="pictures/ss3.png" alt="KAN Network" width="1000" height="600">
 </p>
 <p align="center">
   <img src="pictures/ss2.png" alt="KAN Network" width="900" height="500">
