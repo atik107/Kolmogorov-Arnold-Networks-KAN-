@@ -74,4 +74,4 @@ Below is a summary of the differences between the baseline MLP and various KAN-b
 - **Interpretability**: Ease of visualizing and understanding internal mechanics.
 
 ### 🔑 Result analysis
-Will be upgraded soon with methodology
+Will be updated soon with methodology
