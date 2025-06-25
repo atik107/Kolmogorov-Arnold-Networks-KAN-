@@ -73,4 +73,5 @@ Below is a summary of the differences between the baseline MLP and various KAN-b
 - **Training Speed**: Relative training speed under identical setups.
 - **Interpretability**: Ease of visualizing and understanding internal mechanics.
 
-> Each KAN variant represents a unique perspective on how to learn complex functions using simple, interpretable, univariate transformations.
+### 🔑 Result analysis
+Will be upgraded soon with methodology
